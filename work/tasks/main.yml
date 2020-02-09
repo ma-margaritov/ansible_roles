@@ -1,0 +1,12 @@
+---
+# tasks file for work
+- name: check tomcat8 is installed
+  apt:
+   name: tomcat8
+   state: present
+
+- name: copy artefact
+  command:
+   cmd: mv {{ artefact }} {{ d_folder }}   
+  notify:
+   - restart tomcat8

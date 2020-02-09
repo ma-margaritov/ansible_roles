@@ -1,0 +1,8 @@
+---
+- name: development artefact
+  hosts: single
+  become: yes
+
+  roles:
+  - devel
+  - work

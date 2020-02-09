@@ -1,0 +1,21 @@
+---
+# tasks file for devel
+- name: apt update && apt install
+  apt:
+   pkg:
+    - git
+    - maven
+    - tomcat8
+    - python
+    - ncdu
+    - tmux
+   update_cache: yes
+
+- name: download test package from github
+  git:
+   repo: https://github.com/doct15/example-tomcat-war.git
+   dest: /root/repo
+- name: build package with maven
+  command:
+   chdir: /root/repo
+   cmd: mvn package

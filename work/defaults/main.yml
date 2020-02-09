@@ -1,0 +1,4 @@
+---
+# defaults file for work
+artefact: /root/repo/target/SimpleTomcatWebApp.war
+d_folder: /var/lib/tomcat8/webapps
